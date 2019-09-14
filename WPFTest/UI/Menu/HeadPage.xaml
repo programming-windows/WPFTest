@@ -1,0 +1,28 @@
+﻿<base:ChildPage x:Class="WPFTest.UI.Menu.HeadPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFTest.UI.Menu"          
+      xmlns:base="clr-namespace:WPFTest.UI"  
+      mc:Ignorable="d" 
+      d:DesignHeight="100" d:DesignWidth="1024"
+	Title="Head">
+
+        <Grid HorizontalAlignment="Stretch"  Margin="0" Grid.Row="0" VerticalAlignment="Stretch" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="setting" Grid.Column="4"  Content="系统设置" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="60" Height="30" Click="setting_Click_1"/>
+        <Button x:Name="exit" Grid.Column="5"  Content="退出" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="60" Height="30" Click="exit_Click_1"/>
+    </Grid>
+        
+        
+
+</base:ChildPage>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="WPFTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="demo" Height="600" Width="960" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Normal">
+    <Grid Name="grid" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Frame Background="AntiqueWhite" x:Name="headFrame" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,0" NavigationUIVisibility="Hidden" Content="head" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+        <Frame Background="AliceBlue" x:Name="mainMenuFrame" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0" NavigationUIVisibility="Hidden" Content="top menu" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+        <Frame Background="Azure" x:Name="leftMenuFrame" Grid.Row="2" Grid.Column="0" Margin="0,0,0,0" NavigationUIVisibility="Hidden" Content="left menu" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+        <Frame x:Name="contentFrame" Grid.Row="2" Grid.Column="1" Margin="0,0,0,0" NavigationUIVisibility="Hidden" Content="" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+    </Grid>
+</Window>

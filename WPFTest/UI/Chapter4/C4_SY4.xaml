@@ -1,0 +1,67 @@
+﻿<base:ChildPage x:Class="WPFTest.UI.Chapter4.C4_SY4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFTest.UI.Chapter4"
+      xmlns:base="clr-namespace:WPFTest.UI"
+      mc:Ignorable="d" 
+       d:DesignHeight="600" d:DesignWidth="920"
+      Title="实验：线程" Loaded="ChildPage_Loaded">
+
+    <Grid HorizontalAlignment="Stretch"  Margin="0" VerticalAlignment="Stretch">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="180"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <!-- 
+        <Label x:Name="label1" Grid.Row="0" Grid.Column="0" Content="求和"   HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,8" Height="24"  />
+        <TextBox x:Name="textBox1"  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left" Height="30"  Width="120" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="0,5"/>
+        <Label x:Name="label2" Grid.Row="0" Grid.Column="1" Content="+"   HorizontalAlignment="Left" Height="30"  Width="30" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="120,5,0,5"  />
+        <TextBox x:Name="textBox2"  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left" Height="30"  Width="120" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="160,5,0,5"/>
+        <Label x:Name="label3" Grid.Row="0" Grid.Column="2" Content="="   HorizontalAlignment="Left" Height="30"  Width="120" VerticalAlignment="Center" HorizontalContentAlignment="Left"   />
+        <TextBox x:Name="textBox3"  Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Left" Height="30"  Width="120" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Margin="120,0,0,0"/>
+         <TextBox x:Name="textBox2"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" />
+        
+        -->
+        <ListBox x:Name="listBox1"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="btn1" Grid.Row="0" Grid.Column="0"  Content="当前线程" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="btn1_Click"/>
+            <Button x:Name="btn2" Grid.Row="1" Grid.Column="0"  Content="创建线程" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="btn2_Click"/>
+            <Button x:Name="btn3" Grid.Row="2" Grid.Column="0"  Content="前台线程" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="btn3_Click" />
+            <Button x:Name="btn4" Grid.Row="3" Grid.Column="0"  Content="后台线程" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="btn4_Click" />
+            <Button x:Name="btn5" Grid.Row="4" Grid.Column="0"  Content="Join线程" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="btn5_Click" />
+            <Button x:Name="btn6" Grid.Row="5" Grid.Column="0"  Content="线程同步" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="btnSync_Click" />
+            <Button x:Name="btn7" Grid.Row="6" Grid.Column="0"  Content="线程异步" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="btnAsync_Click" />
+            <Button x:Name="btn8" Grid.Row="7" Grid.Column="0"  Content="线程异步回调" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="btnAsyncAdvanced_Click" />
+            <Button x:Name="btn9" Grid.Row="8" Grid.Column="0"  Content="AutoResetEvent" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="BtbAutoResetEvent" />
+            <Button x:Name="btn10" Grid.Row="9" Grid.Column="0"  Content="MaualResetEvent" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="BtbManualResetEvent" />
+            <Button x:Name="btn11" Grid.Row="10" Grid.Column="0"  Content="生产者消费者" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="120" Height="30" Click="produceConsume" />
+            
+        </Grid>
+
+    </Grid>
+</base:ChildPage>

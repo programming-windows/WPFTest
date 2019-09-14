@@ -1,0 +1,70 @@
+﻿<base:ChildPage x:Class="WPFTest.UI.Chapter6.RoomTypeListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPFTest.UI.Chapter6"          
+      xmlns:base="clr-namespace:WPFTest.UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="1024"
+	Title="房型列表" Loaded="ChildPage_Loaded_1">
+
+    <Grid HorizontalAlignment="Stretch"  Margin="0" VerticalAlignment="Stretch" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="label1" Grid.Row="0" Grid.Column="0" Content="房型列表"  HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,0"  />
+
+        <!--
+        <Button x:Name="new" Grid.Row="0" Grid.Column="2" Content="新建" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="60" Height="30" Click="new_Click_1" />
+        <Button x:Name="edit" Grid.Row="0" Grid.Column="3"  Content="修改" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="60" Height="30" Click="edit_Click_1"/>
+        <Button x:Name="del" Grid.Row="0" Grid.Column="4"  Content="删除" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="60" Height="30" Click="del_Click_1" />
+        -->
+        <Button x:Name="show" Grid.Row="0" Grid.Column="5"  Content="显示房号" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="80" Height="30" Click="showDetail_Click_1" />
+
+
+        <DataGrid x:Name="dataGrid" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.ColumnSpan="6" HorizontalAlignment="Stretch" Margin="0"  VerticalAlignment="Stretch"  EnableRowVirtualization="False" IsReadOnly="True" 
+                AlternationCount="2" AutoGenerateColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Single" MouseDoubleClick="datagrid_MouseDoubleClick">
+            
+            <DataGrid.Columns>
+                
+                <DataGridTextColumn Header="房型编号" Width="*" Binding="{Binding type }" />
+                <DataGridTextColumn Header="房型名称" Width="*" Binding="{Binding description }" />
+
+                <DataGridTextColumn Header="房型特征" Width="*" Binding="{Binding remarks }"/>
+                <DataGridTextColumn Header="房型价格" Width="*" Binding="{Binding price }"/>
+                
+            </DataGrid.Columns>
+            
+        </DataGrid>
+
+        <Label x:Name="label2" Grid.Row="2" Grid.Column="0" Content="房号列表"  HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalContentAlignment="Left" Margin="0,0,0,0"  />
+        <DataGrid x:Name="dataGrid2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="3" Grid.ColumnSpan="6" HorizontalAlignment="Stretch" Margin="0"  VerticalAlignment="Stretch"  EnableRowVirtualization="False" IsReadOnly="True" 
+                AlternationCount="2" AutoGenerateColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Single" >
+
+            <DataGrid.Columns>
+                <!--  -->  
+                <DataGridTextColumn Header="房型编号" Width="*" Binding="{Binding type.type }" />
+                
+                <DataGridTextColumn Header="房号" Width="*" Binding="{Binding roomNumber }" />
+                <DataGridTextColumn Header="所在地址" Width="*" Binding="{Binding location }"/>
+                <DataGridTextColumn Header="说明" Width="*" Binding="{Binding comments }"/>
+                <DataGridTextColumn Header="房价" Width="*" Binding="{Binding price }"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+</base:ChildPage>

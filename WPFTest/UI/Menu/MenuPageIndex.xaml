@@ -1,0 +1,31 @@
+﻿<base:ChildPage x:Class="WPFTest.UI.Menu.MenuPageIndex"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WPFTest.UI.Menu"          
+      xmlns:base="clr-namespace:WPFTest.UI" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="120"
+	Title="MenuPageIndex" Loaded="ChildPage_Loaded_1">
+
+    <Grid Name="grid" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="jz" Grid.Row="0"  Content="机组信息" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="80" Height="30" Click="jz_Click_1" />
+        <Button x:Name="sbdss" Grid.Row="1"  Content="输变电设施" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="80" Height="30" Click="sbdss_Click_1"/>
+        <Button x:Name="hss" Grid.Row="2"  Content="核设施" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="80" Height="30" Click="hss_Click_1"/>
+        <Button x:Name="hfw" Grid.Row="3"  Content="核废物" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="80" Height="30" Click="hfw_Click_1"/>
+        <Button x:Name="shdw" Grid.Row="4"  Content="涉核单位" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="80" Height="30" Click="shdw_Click_1"/>
+        <Button x:Name="shry" Grid.Row="5"  Content="涉核人员" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="80" Height="30" Click="shry_Click_1"/>
+        
+    </Grid>
+</base:ChildPage>

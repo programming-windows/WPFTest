@@ -1,0 +1,38 @@
+﻿<Window x:Class="WPFTest.UI.YesOrNoDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTest.UI"
+        mc:Ignorable="d"  Background="#FFF1F1F1"  Height="300" Width="500" ShowInTaskbar="False" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" Topmost="True">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Name="infoTextBlock"  HorizontalAlignment="Center" Margin="0,88.28,0,0" TextWrapping="Wrap" Text="fsfwefwefwef" VerticalAlignment="Top" FontSize="28"/>
+        <Border Grid.Row="1" Grid.Column="0" Name="okBorder" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="84" Width="132" MouseDown="okBorder_MouseDown" TouchDown="okBorder_TouchDown" >
+            <!--
+            <Border.Background>
+                <ImageBrush x:Name="background1" ImageSource="./Images/Cotell/confirm.png"/>
+            </Border.Background>
+            -->
+            <TextBlock Text="是" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="#FF453C1D"></TextBlock>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="1" Name="noBorder" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="84" Width="132" MouseDown="noBorder_MouseDown" TouchDown="noBorder_TouchDown" >
+            <!--
+            <Border.Background>
+                <ImageBrush x:Name="background2" ImageSource="./Images/Cotell/confirm.png"/>
+            </Border.Background>
+            -->
+            <TextBlock Text="否" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="24" Foreground="#FF453C1D" ></TextBlock>
+        </Border>
+    </Grid>
+</Window>

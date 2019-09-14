@@ -1,0 +1,27 @@
+﻿<base:ChildPage x:Class="WPFTest.UI.Menu.MenuPageChapter1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFTest.UI.Menu"          
+      xmlns:base="clr-namespace:WPFTest.UI" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="160"
+      Title="MenuPageChapter1" Loaded="ChildPage_Loaded">
+
+    <Grid Name="grid" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="jz" Grid.Row="0"  Content="实验1-汉字识别与转换" HorizontalAlignment="Center"  VerticalAlignment="Center" HorizontalContentAlignment="Left" Width="160" Height="30" Click="sy1_Click" />
+        <Button x:Name="jz_Copy" Grid.Row="1"  Content="实验2-文件合并"  HorizontalAlignment="Center"  VerticalAlignment="Center" HorizontalContentAlignment="Left"  Width="160" Height="30" Click="sy2_Click"  />
+
+    </Grid>
+</base:ChildPage>
